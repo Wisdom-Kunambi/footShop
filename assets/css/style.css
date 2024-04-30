@@ -179,6 +179,37 @@ body {
     --background: hsla(0, 0%, 0%, 0.1);
 }
 
+.has-scrollbar {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar > li {
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar { height: 10px; }
+
+.has-scrollbar::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 20px;
+    outline: 2px solid var(--bittersweet);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--bittersweet);
+    border-radius: 20px;
+    border: 2px solid var(--white);   
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+    width: calc(25% - 40px);
+}
+
 /* Header */
 
 .header {
@@ -370,6 +401,21 @@ body {
     max-width: 46ch;
     margin-bottom: 25px;
 
+}
+
+
+/* Collection */
+
+.collection-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 45px 25px;
 }
 
 
