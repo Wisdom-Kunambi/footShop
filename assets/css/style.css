@@ -210,6 +210,143 @@ body {
     width: calc(25% - 40px);
 }
 
+.card-banner {
+    background: var(--cultured);
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: var(--transition-2);
+}
+
+.product-card:is(:hover, :focus) .image-contain {
+    transform: scale(1.1);
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--bittersweet);
+    color: var(--white);
+    padding: 5px 15px;
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-7);
+    border-radius: 25px;
+}
+
+.card-action-list {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    opacity: 0;
+    transition: var(--transition-1);
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+    right: 20px;
+    opacity: 1;
+}
+
+.card-action-item {
+    position: relative;
+}
+
+.card-action-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card-action-btn {
+    background: var(--white);
+    color: var(--rich-black-fogra-29);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+
+.card-action-btn ion-icon {
+    --ionicon-stroke-width: 30px;
+}
+
+.card-action-btn:is(:hover, :focus) {
+    background: var(--bittersweet);
+    color: var(--white);
+}
+
+.card-action-tooltip {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 5px);
+    transform: translateY(-50%);
+    width: max-content;
+    background: var(--black_90);
+    color: var(--white);
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+}
+
+.card-action-btn:is(:hover, :focus) + .card-action-tooltip {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 24px 15px 0;
+    text-align: center;
+}
+
+.card-cat {
+    font-family: var(--ff-roboto);
+    color: var(--onyx);
+    font-size: var(--fs-7);
+    margin-bottom: 12px;
+}
+
+.card-cat-link {
+    display: inline-block;
+    color: inherit;
+    transition: var(--transition-1);
+}
+
+.card-cat-link:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.product-card .card-title {
+    margin-bottom: 12px;
+}   
+
+.product-card .card-title > a {
+    color: inherit;
+    transition: var(--transition-1);
+}
+
+.product-card .card-title > a:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.card-price {
+    color: var(--bittersweet);
+    font-family: var(--ff-roboto);
+    font-weight: var(--fw-600);
+}
+
+.card-price > del {
+    color: var(--gray-x-11-gray);
+    margin-left: 8px;
+}
+
 /* Header */
 
 .header {
@@ -418,4 +555,39 @@ body {
     padding-block: 45px 25px;
 }
 
+/* Product */
 
+.product .section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    color: var(--onyx);
+    padding: 10px 16px;
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+    border: 1px solid var(--gainsboro);
+    border-radius: 30px;
+}
+
+.filter-btn.active {
+    background: var(--bittersweet);
+    color: var(--white);
+    border-color: var(--bittersweet);
+}
+
+.product-list {
+    display: grid;
+    gap: 50px 25px;
+}
