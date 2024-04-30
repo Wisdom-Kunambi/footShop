@@ -123,6 +123,62 @@ body {
 
 .container { padding-inline: 15px; }
 
+.section {
+    padding-block: var(--section-padding);
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+    color: var(--rich-black-fogra-29);
+}
+
+.h1 {
+    font-size: var(--fs-1);
+    font-weight: var(--fw-300);
+    line-height: 1.5;
+}
+
+.h2 {
+    font-size: var(--fs-2);
+}
+
+.h3 {
+    font-size: var(--fs-4);
+}
+
+.h4 {
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+}
+
+.btn {
+    background: var(--background, var(--bittersweet));
+    color: var(--color, var(--white));
+    font-size: var(--fs-5);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 25px;
+    border: 1px solid var(--border-color, var(--bittersweet));
+}
+
+.btn-primary:is(:hover, :focus) {
+    --background: var(--salmon);
+    --border-color: var(--salmon);
+}
+
+.btn-secondary {
+    --background: transparent;
+    --border-color: var(--black);
+    --color: var(--black);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    --background: hsla(0, 0%, 0%, 0.1);
+}
+
 /* Header */
 
 .header {
@@ -285,3 +341,35 @@ body {
     opacity: 1;
     pointer-events: all;
 }
+
+/* Hero */
+
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-title {
+    margin-bottom: 10px;
+}
+
+.hero-title > strong {
+    display: block;
+}
+
+.hero-text {
+    color: var(--onyx);
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-8);
+    line-height: 1.8;
+    max-width: 46ch;
+    margin-bottom: 25px;
+
+}
+
+
