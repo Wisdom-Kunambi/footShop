@@ -724,3 +724,34 @@ body {
     display: inline-block;
     color: var(--bittersweet);
 }
+
+/* Insta Post */
+
+.insta-post-list {
+    gap: 0;
+}
+
+.insta-post-list .insta-post-item {
+    position: relative;
+    min-width: 33.33%;
+    aspect-ratio: 1 / 1;
+}
+
+.insta-post-link {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: var(--oxford-blue_60);
+    opacity: 0;
+    transition: var(--transition-1);
+}
+
+.insta-post-link ion-icon {
+    color: var(--white);
+    font-size: 40px;
+}
+
+.insta-post-link:is(:hover, :focus) {
+    opacity: 1;
+}
