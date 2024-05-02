@@ -636,3 +636,40 @@ body {
     margin-bottom: 20px;
 }
 
+/* Special banner */
+
+.special-banner {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    background-color: var(--smoky-black);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.special-banner .banner-title {
+    color: var(--white);
+    font-weight: var(--fw-600);   
+}
+
+.special .section-title {
+    margin-block: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.special .section-title .text {
+    min-width: max-content;
+}
+
+.special .section-title .line {
+    width: 100%;
+    height: 1px;
+    background: var(--gainsboro);
+}
