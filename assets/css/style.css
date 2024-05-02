@@ -673,3 +673,54 @@ body {
     height: 1px;
     background: var(--gainsboro);
 }
+
+/* Service */
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-inline: 30px;
+}
+
+.service-item {
+    width: 220px;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-card .card-icon {
+    background: var(--bittersweet);
+    min-width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.service-card .card-icon img {
+    filter: brightness(0) invert(1);
+    width: 60%;
+    height: auto;
+}
+
+.service-card .card-title {
+    font-size: var(--fs-6);
+    margin-bottom: 8px;
+}
+
+.service-card .card-text {
+    color: var(--onyx);
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-7);
+}
+
+.service-card .card-text span {
+    display: inline-block;
+    color: var(--bittersweet);
+}
