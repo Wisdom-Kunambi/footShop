@@ -755,3 +755,60 @@ body {
 .insta-post-link:is(:hover, :focus) {
     opacity: 1;
 }
+
+/* Footer */
+
+.footer {
+    font-family: var(--ff-roboto);
+}
+
+.footer-top {
+    background: var(--cultured);
+}
+
+.footer-brand {
+    padding-bottom: 50px;
+    border-bottom: 1px var(--gainsboro);
+    margin-bottom: 50px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 15px;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-link {
+    background: var(--gainsboro);
+    color: var(--onyx);
+    font-size: 20px;
+    padding: 10px;
+    transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus) {
+    background: var(--bittersweet);
+    color: var(--white);
+}
+
+.footer-list-title {
+    position: relative;
+    color: var(--rich-black-fogra-29);
+    font-family: var(--ff-josefin-sans);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+    margin-bottom: 25px;
+}
+
+.footer-list-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--bittersweet);
+    margin-top: 10px;
+}
